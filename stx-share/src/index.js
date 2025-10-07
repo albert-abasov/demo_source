@@ -1,1 +1,1 @@
-export { parseStx, groupByPackage } from './parser.js';
+export { parseStx, groupByPackage } from './custom_parser.js';
