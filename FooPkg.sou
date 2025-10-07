@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+
+<st-source>
+<Name>Case sensitive</Name>
+<name>name and Name are different tag</name>
+</st-source>
