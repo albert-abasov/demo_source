@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<st-source>
+<time-stamp>From VisualWorks®, 7.4 of December 5, 2005 on October 10, 2025 at 12:00:00 pm</time-stamp>
+<!-- Package FooPkg* -->
+<component-property>
+    <name>FooPkg</name>
+    <type>package</type>
+    <property>packageName</property>
+    <value>'FooPkg'</value>
+</component-property>
+<name-space>
+    <name>Lam</name>
+    <environment>Smalltalk</environment>
+    <private>false</private>
+    <imports>private Smalltalk.*</imports>
+    <category>FooPkg</category>
+    <attributes><package>FooPkg</package></attributes>
+</name-space>
+<class>
+    <name>Foo</name>
+    <environment>Smalltalk</environment>
+    <super>Core.Object</super>
+    <private>false</private>
+    <indexed-type>none</indexed-type>
+    <inst-vars>value</inst-vars>
+    <class-inst-vars></class-inst-vars>
+    <imports></imports>
+    <category>FooPkg</category>
+    <attributes><package>FooPkg</package></attributes>
+</class>
+<comment>
+    <class-id>Foo</class-id>
+    <body>Foo class holds a single value and can return it.</body>
+</comment>
+<methods>
+    <class-id>Foo</class-id>
+    <category>accessing</category>
+    <body package="FooPkg" selector="value">value ^value</body>
+    <body package="FooPkg" selector="value:">value: anObject value := anObject</body>
+</methods>
+</st-source>
