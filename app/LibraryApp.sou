@@ -44,7 +44,7 @@ LibrarySystem demonstrates usage of LibraryCore package classes.
 <!-- ====================================================== -->
 
 <methods>
-<class-id>LibrarySystemClass</class-id> <category>examples</category>
+<class-id>LibrarySystem</class-id> <category>examples</category>
 
 <body package="LibraryApp" selector="main">main
 	"Demonstration using LibraryCore classes"
