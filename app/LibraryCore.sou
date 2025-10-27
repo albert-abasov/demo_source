@@ -30,6 +30,13 @@
 </attributes>
 </class>
 
+<comment>
+<class-id>Book</class-id>
+<body>
+Book represents a single book in the library.
+</body>
+</comment>
+
 <methods>
 <class-id>Book</class-id> <category>accessing</category>
 
