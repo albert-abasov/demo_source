@@ -110,6 +110,8 @@ Member represents a library member.
 <class-id>Member</class-id> <category>borrowing</category>
 
 <body package="LibraryCore" selector="borrow:">borrow: aBook
+    "Mark the given book as checked out and add it to the list of borrowed books."
+
 	aBook checkedOut: true.
 	borrowedBooks add: aBook.</body>
 
