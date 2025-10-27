@@ -32,6 +32,13 @@
 </attributes>
 </class>
 
+<comment>
+<class-id>LibrarySystem</class-id>
+<body>
+LibrarySystem demonstrates usage of LibraryCore package classes.
+</body>
+</comment>
+
 <!-- ====================================================== -->
 <!-- Class-side (LibrarySystem class): main -->
 <!-- ====================================================== -->
