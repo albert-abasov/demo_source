@@ -118,11 +118,4 @@ Member represents a library member.
 	borrowedBooks remove: aBook ifAbsent: [].</body>
 </methods>
 
-<comment>
-<class-id>Book</class-id>
-<body>
-Book represents a single book in the library.
-</body>
-</comment>
-
 </st-source>
