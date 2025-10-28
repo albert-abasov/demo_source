@@ -46,14 +46,8 @@ Book represents a single book in the library.
 <body package="LibraryCore" selector="title:">title: aString
 	title := aString</body>
 
-<body package="LibraryCore" selector="author">author
-	^author</body>
-
 <body package="LibraryCore" selector="author:">author: aString
 	author := aString</body>
-
-<body package="LibraryCore" selector="checkedOut">checkedOut
-	^checkedOut</body>
 
 <body package="LibraryCore" selector="checkedOut:">checkedOut: aBoolean
 	checkedOut := aBoolean</body>
@@ -112,10 +106,6 @@ Member represents a library member.
 <body package="LibraryCore" selector="borrow:">borrow: aBook
 	aBook checkedOut: true.
 	borrowedBooks add: aBook.</body>
-
-<body package="LibraryCore" selector="return:">return: aBook
-	aBook checkedOut: false.
-	borrowedBooks remove: aBook ifAbsent: [].</body>
 </methods>
 
 </st-source>
