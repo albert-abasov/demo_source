@@ -40,6 +40,12 @@ Book represents a single book in the library.
 <methods>
 <class-id>Book</class-id> <category>accessing</category>
 
+<body package="LibraryCore" selector="title">title
+	^title</body>
+
+<body package="LibraryCore" selector="title:">title: aString
+	title := aString</body>
+
 <body package="LibraryCore" selector="author">author
 	^author</body>
 
@@ -94,6 +100,11 @@ Member represents a library member.
 
 <methods>
 <class-id>Member</class-id> <category>initialization</category>
+
+<body package="LibraryCore" selector="initialize">initialize
+	super initialize.
+	borrowedBooks := OrderedCollection new.</body>
+</methods>
 
 <methods>
 <class-id>Member</class-id> <category>borrowing</category>
