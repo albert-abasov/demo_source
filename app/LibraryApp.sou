@@ -57,6 +57,9 @@ LibrarySystem demonstrates usage of LibraryCore package classes.
 	alice := Member new name: 'Alice'; yourself.
 	bob := Member new name: 'Bob'; yourself.
 
+	alice borrow: book1.
+	bob borrow: book2.
+
 	Transcript
 		cr; show: '=== LibraryApp Demo ==='; cr;
 		show: 'Alice borrowed: ', (alice borrowedBooks collect: [:b | b title]) printString; cr;

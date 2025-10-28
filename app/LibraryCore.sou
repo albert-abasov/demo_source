@@ -109,6 +109,10 @@ Member represents a library member.
 <methods>
 <class-id>Member</class-id> <category>borrowing</category>
 
+<body package="LibraryCore" selector="borrow:">borrow: aBook
+	aBook checkedOut: true.
+	borrowedBooks add: aBook.</body>
+
 <body package="LibraryCore" selector="return:">return: aBook
 	aBook checkedOut: false.
 	borrowedBooks remove: aBook ifAbsent: [].</body>
