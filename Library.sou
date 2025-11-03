@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+
+<st-source>
+<time-stamp>From VisualWorks®, 7.4 of December 5, 2005 on October 10, 2025 at 2:10:00 pm</time-stamp>
+<!-- Package Library* -->
+
+<component-property>
+<name>Library</name>
+<type>package</type>
+<property>packageName</property>
+<value>'Library'</value>
+</component-property>
+
+<!-- ====================================================== -->
+<!-- Class: Book -->
+<!-- ====================================================== -->
+
+<class>
+<name>Book</name>
+<environment>Smalltalk</environment>
+<super>Core.Object</super>
+<private>false</private>
+<indexed-type>none</indexed-type>
+<inst-vars>title author checkedOut</inst-vars>
+<class-inst-vars></class-inst-vars>
+<imports></imports>
+<category>Library</category>
+<attributes>
+<package>Library</package>
+</attributes>
+</class>
+
+<comment>
+<class-id>Book</class-id>
+<body>
+Book represents a single book in the library.
+</body>
+</comment>
+
+<methods>
+<class-id>Book</class-id> <category>accessing</category>
+
+<body package="Library" selector="title">title
+	^title</body>
+
+<body package="Library" selector="title:">title: aString
+	title := aString</body>
+
+<body package="Library" selector="author:">author: aString
+	author := aString</body>
+
+<body package="Library" selector="checkedOut:">checkedOut: aBoolean
+	checkedOut := aBoolean</body>
+</methods>
+
+<!-- ====================================================== -->
+<!-- Class: Member -->
+<!-- ====================================================== -->
+
+<class>
+<name>Member</name>
+<environment>Smalltalk</environment>
+<super>Core.Object</super>
+<private>false</private>
+<indexed-type>none</indexed-type>
+<inst-vars>name borrowedBooks</inst-vars>
+<class-inst-vars></class-inst-vars>
+<imports></imports>
+<category>Library</category>
+<attributes>
+<package>Library</package>
+</attributes>
+</class>
+
+<comment>
+<class-id>Member</class-id>
+<body>
+Member represents a library member who can borrow books.
+</body>
+</comment>
+
+<methods>
+<class-id>Member</class-id> <category>accessing</category>
+
+<body package="Library" selector="name">name
+	^name</body>
+
+<body package="Library" selector="name:">name: aString
+	name := aString</body>
+
+<body package="Library" selector="borrowedBooks">borrowedBooks
+	^borrowedBooks</body>
+</methods>
+
+<methods>
+<class-id>Member</class-id> <category>initialization</category>
+
+<body package="Library" selector="initialize">initialize
+	super initialize.
+	borrowedBooks := OrderedCollection new.</body>
+</methods>
+
+<methods>
+<class-id>Member</class-id> <category>borrowing</category>
+
+<body package="Library" selector="borrow:">borrow: aBook
+	aBook checkedOut: true.
+	borrowedBooks add: aBook.</body>
+</methods>
+
+<!-- ====================================================== -->
+<!-- Class: LibrarySystem -->
+<!-- ====================================================== -->
+
+<class>
+<name>LibrarySystem</name>
+<environment>Smalltalk</environment>
+<super>Core.Object</super>
+<private>false</private>
+<indexed-type>none</indexed-type>
+<inst-vars></inst-vars>
+<class-inst-vars></class-inst-vars>
+<imports>
+<import>Library</import>
+</imports>
+<category>Library</category>
+<attributes>
+<package>Library</package>
+</attributes>
+</class>
+
+<comment>
+<class-id>LibrarySystem</class-id>
+<body>
+LibrarySystem demonstrates the use of Library classes Book and Member.
+</body>
+</comment>
+
+<!-- ====================================================== -->
+<!-- Class-side (LibrarySystem class): main -->
+<!-- ====================================================== -->
+
+<methods>
+<class-id>LibrarySystem</class-id> <category>examples</category>
+
+<body package="Library" selector="main">main
+	"Demonstration using Library classes"
+
+	| alice bob book1 book2 |
+
+	book1 := Book new title: 'Smalltalk Best Practices'; author: 'Kent Beck'; yourself.
+	book2 := Book new title: 'Refactoring'; author: 'Martin Fowler'; yourself.
+
+	alice := Member new name: 'Alice'; yourself.
+	bob := Member new name: 'Bob'; yourself.
+
+	alice borrow: book1.
+	bob borrow: book2.
+
+	Transcript
+		cr; show: '=== Library Demo ==='; cr;
+		show: 'Alice borrowed: ', (alice borrowedBooks collect: [:b | b title]) printString; cr;
+		show: 'Bob borrowed: ', (bob borrowedBooks collect: [:b | b title]) printString; cr;
+		show: '--- End of Demo ---'; cr.
+</body>
+</methods>
+
+</st-source>
