@@ -100,6 +100,14 @@ Member represents a library member who can borrow books.
 	borrowedBooks := OrderedCollection new.</body>
 </methods>
 
+<methods>
+<class-id>Member</class-id> <category>borrowing</category>
+
+<body package="Library" selector="borrow:">borrow: aBook
+	aBook checkedOut: true.
+	borrowedBooks add: aBook.</body>
+</methods>
+
 <!-- ====================================================== -->
 <!-- Class: LibrarySystem -->
 <!-- ====================================================== -->
