@@ -92,6 +92,16 @@ Member represents a library member who can borrow books.
 	^borrowedBooks</body>
 </methods>
 
+<methods>
+<class-id>Member</class-id> <category>initialization</category>
+
+<body package="Library" selector="initialize">initialize
+	super initialize.
+	"Create a new ordered collection for borrowed books"
+	borrowedBooks := OrderedCollection new.
+</body>
+</methods>
+
 <!-- ====================================================== -->
 <!-- Class: LibrarySystem -->
 <!-- ====================================================== -->
